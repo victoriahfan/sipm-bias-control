@@ -20,10 +20,20 @@ import json
 import os
 import random
 import re
+import ssl
 import string
+import sys
 import time
 import urllib.request
+import urllib.error
 from pathlib import Path
+
+# Use certifi's CA bundle if available (fixes SSL errors on macOS Python from python.org)
+try:
+    import certifi
+    _SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
+except ImportError:
+    _SSL_CONTEXT = None
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CONSOLIDATED = REPO_ROOT / "BillOfMaterials_consolidated.csv"
@@ -33,6 +43,18 @@ LCSC_BASE = "https://wmsc.lcsc.com/rest/wmsc2agent"
 NEXAR_TOKEN_URL = "https://identity.nexar.com/connect/token"
 NEXAR_GRAPHQL_URL = "https://api.nexar.com/graphql"
 SCOPE = "supply.domain"
+
+
+def _save_debug_response(obj):
+    """Write DEBUG response to manufacturing/nexar_debug_response.json."""
+    try:
+        dump_path = REPO_ROOT / "manufacturing" / "nexar_debug_response.json"
+        dump_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(dump_path, "w", encoding="utf-8") as f:
+            json.dump(obj, f, indent=2)
+        print(f"  [Debug] Response saved to {dump_path}", file=sys.stderr)
+    except Exception as e:
+        print(f"  [Debug] Could not save response: {e}", file=sys.stderr)
 
 
 # ---------- LCSC (JLCPCB ecosystem) ----------
@@ -60,7 +82,7 @@ def lcsc_search(key: str, secret: str, keyword: str) -> tuple:
     url = f"{LCSC_BASE}/search/product?{qs}"
     try:
         req = urllib.request.Request(url, method="GET")
-        with urllib.request.urlopen(req, timeout=15) as resp:
+        with urllib.request.urlopen(req, timeout=15, context=_SSL_CONTEXT) as resp:
             data = json.loads(resp.read().decode())
     except Exception:
         return None, None
@@ -120,14 +142,21 @@ def get_nexar_token():
         headers={"Content-Type": "application/x-www-form-urlencoded"},
     )
     try:
-        with urllib.request.urlopen(req, timeout=15) as resp:
+        with urllib.request.urlopen(req, timeout=15, context=_SSL_CONTEXT) as resp:
             out = json.loads(resp.read().decode())
             return out.get("access_token"), None
     except urllib.error.HTTPError as e:
         body = e.read().decode() if e.fp else ""
         return None, f"Nexar token error: {e.code} {body}"
     except Exception as e:
-        return None, str(e)
+        err = str(e)
+        if "CERTIFICATE_VERIFY_FAILED" in err or "SSL" in err:
+            return None, (
+                "SSL certificate error. Fix with one of:\n"
+                "  1. pip install certifi   then run this script again\n"
+                "  2. On macOS: run '/Applications/Python 3.x/Install Certificates.command'"
+            )
+        return None, err
 
 
 def nexar_graphql(token: str, query: str, variables: dict = None) -> dict:
@@ -144,11 +173,29 @@ def nexar_graphql(token: str, query: str, variables: dict = None) -> dict:
             "Authorization": f"Bearer {token}",
         },
     )
-    with urllib.request.urlopen(req, timeout=20) as resp:
+    with urllib.request.urlopen(req, timeout=20, context=_SSL_CONTEXT) as resp:
         return json.loads(resp.read().decode())
 
 
-def nexar_search_part_price(token: str, search_term: str) -> tuple:
+def _get_price_float(p: dict) -> tuple:
+    """Get (price, quantity) from a price tier dict; handle camelCase or snake_case.
+    If quantity is missing, treat price as unit price (quantity=1).
+    """
+    qty = p.get("quantity") or p.get("productNumber")
+    try:
+        qty = int(qty) if qty is not None else 1
+    except (TypeError, ValueError):
+        qty = 1
+    if qty < 1:
+        qty = 1
+    raw = p.get("convertedPrice") or p.get("price") or p.get("productPrice")
+    try:
+        return float(raw), qty
+    except (TypeError, ValueError):
+        return None, 0
+
+
+def nexar_search_part_price(token: str, search_term: str, debug: bool = False) -> tuple:
     q = search_term.replace("\\", "\\\\").replace('"', '\\"')[:200]
     query = '''
     query ($q: String!) {
@@ -177,7 +224,24 @@ def nexar_search_part_price(token: str, search_term: str) -> tuple:
     '''
     try:
         data = nexar_graphql(token, query, {"q": q})
-    except Exception:
+    except urllib.error.HTTPError as e:
+        if debug:
+            body = e.read().decode() if e.fp else ""
+            print(f"  [API error {e.code}] {body[:300]}", file=sys.stderr)
+            _save_debug_response({"error": "HTTPError", "code": e.code, "body": body[:500]})
+        return None, None
+    except Exception as e:
+        if debug:
+            print(f"  [Error] {e}", file=sys.stderr)
+            _save_debug_response({"error": str(e), "type": type(e).__name__})
+        return None, None
+    # Always save raw response when DEBUG=1 so we can see what Nexar returned
+    if debug:
+        _save_debug_response(data)
+    errors = data.get("errors") or []
+    if errors:
+        if debug:
+            print(f"  [GraphQL] {errors[0].get('message', errors[0])}", file=sys.stderr)
         return None, None
     results = (data.get("data") or {}).get("supSearchMpn", {}).get("results") or []
     if not results:
@@ -189,15 +253,8 @@ def nexar_search_part_price(token: str, search_term: str) -> tuple:
     for s in sellers:
         for offer in (s.get("offers") or []):
             for p in (offer.get("prices") or []):
-                qty = int(p.get("quantity") or 1)
-                if qty < 1:
-                    qty = 1
-                raw = p.get("convertedPrice") or p.get("price")
-                try:
-                    price = float(raw)
-                except (TypeError, ValueError):
-                    continue
-                if price <= 0:
+                price, qty = _get_price_float(p)
+                if price is None or price <= 0 or qty <= 0:
                     continue
                 unit = price / qty
                 if best_price is None or unit < best_price:
@@ -207,14 +264,10 @@ def nexar_search_part_price(token: str, search_term: str) -> tuple:
     if best_price is None:
         med = part.get("medianPrice1000") or {}
         if med:
-            try:
-                qty = int(med.get("quantity") or 1000)
-                raw = med.get("convertedPrice") or med.get("price")
-                if raw is not None and qty > 0:
-                    best_price = round(float(raw) / qty, 4)
-                    best_sku = "median est."
-            except (TypeError, ValueError):
-                pass
+            price, qty = _get_price_float(med)
+            if price is not None and qty > 0:
+                best_price = round(price / qty, 4)
+                best_sku = "median est."
     return (best_price, best_sku) if best_price is not None else (None, None)
 
 
@@ -229,10 +282,16 @@ def looks_like_mpn(value: str) -> bool:
 
 
 def main():
+    # Force unbuffered output so user sees progress
+    sys.stdout.reconfigure(line_buffering=True) if hasattr(sys.stdout, "reconfigure") else None
+    sys.stderr.reconfigure(line_buffering=True) if hasattr(sys.stderr, "reconfigure") else None
+    print("fetch_bom_prices: starting...", flush=True)
     # Prefer LCSC (JLCPCB ecosystem), then Nexar
     lcsc_key = os.environ.get("LCSC_API_KEY", "").strip() or os.environ.get("LCSC_KEY", "").strip()
     lcsc_secret = os.environ.get("LCSC_API_SECRET", "").strip() or os.environ.get("LCSC_SECRET", "").strip()
+    print("Checking Nexar credentials...", flush=True)
     nexar_token, nexar_err = get_nexar_token()
+    print("Nexar token: " + ("ok" if nexar_token else str(nexar_err or "none")), flush=True)
 
     if lcsc_key and lcsc_secret:
         source = "LCSC (JLCPCB)"
@@ -240,8 +299,9 @@ def main():
             return lcsc_search(lcsc_key, lcsc_secret, search_term)
     elif nexar_token:
         source = "Nexar (Octopart)"
-        def fetch_price(search_term):
-            return nexar_search_part_price(nexar_token, search_term)
+        debug = os.environ.get("DEBUG", "").strip().lower() in ("1", "true", "yes")
+        def fetch_price(search_term, do_debug=False):
+            return nexar_search_part_price(nexar_token, search_term, do_debug)
     else:
         print("No pricing API configured.")
         print("\nLCSC (recommended if you use JLCPCB for boards):")
@@ -258,12 +318,15 @@ def main():
         return
 
     print(f"Using {source} for prices.\n")
+    if source == "Nexar (Octopart)":
+        print("If no prices appear, run with DEBUG=1 to save the first API response to manufacturing/nexar_debug_response.json\n")
     price_cache = {}
     rows = []
     with open(CONSOLIDATED, newline="", encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
 
     seen = set()
+    first_nexar = True
     for r in rows:
         key = (r["Value"], r["Footprint"])
         if key in seen:
@@ -271,7 +334,13 @@ def main():
         seen.add(key)
         value, footprint = key
         search_term = value if looks_like_mpn(value) else f"{value} {footprint}"
-        unit, sku = fetch_price(search_term)
+        do_debug = debug and first_nexar and source == "Nexar (Octopart)"
+        if do_debug:
+            first_nexar = False
+        if source == "Nexar (Octopart)":
+            unit, sku = fetch_price(search_term, do_debug)
+        else:
+            unit, sku = fetch_price(search_term)
         price_cache[key] = (unit, sku)
         label = value[:50] + ("..." if len(value) > 50 else "")
         if unit is not None:
@@ -340,3 +409,11 @@ def main():
         except (TypeError, ValueError):
             pass
     print(f"\nEstimated total (1 of each board): ${total_sum:.2f} USD")
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        print(f"Error: {e}", file=sys.stderr, flush=True)
+        raise

@@ -35,6 +35,9 @@ fp-info-cache
 __pycache__/
 *.py[cod]
 
+# Debug (Nexar API response dump)
+manufacturing/nexar_debug_response.json
+
 #also ignore step files which may not be licensed under open source
 *.step
 *.stp
