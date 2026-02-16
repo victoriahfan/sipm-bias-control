@@ -1,0 +1,11 @@
+References,Value,Footprint,Quantity,Unit_Price_Est_USD,Total_Est_USD,Supplier_Part_Number,Notes
+C17,10n,C_0603_1608Metric,1,,,,
+C2,1u,C_0603_1608Metric,1,,,,
+C8,1uF,C_0603_1608Metric,1,,,,
+"C1,C15,C3,C5,C6",22u,C_0603_1608Metric,5,,,,
+R9,24.9k,R_0603_1608Metric,1,,,,
+R8,64.9k,R_0603_1608Metric,1,,,,
+U1,LM2776,LM2776DBVR,1,,,,
+J3,SSQ-103-03-G-D,PinHeader_2x03_P2.54mm_Vertical,1,,,,
+U3,TPS72301DBVR,TPS72301DBVR,1,,,,
+U5,TPS79333DBVR,TPS79333DBVR,1,,,,

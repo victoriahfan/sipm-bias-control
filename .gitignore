@@ -26,6 +26,14 @@ fp-info-cache
 # Exported BOM files
 *.xml
 *.csv
+# Track project BOM outputs
+!BillOfMaterials_consolidated.csv
+!BillOfMaterials_summary_by_board.csv
+!manufacturing/bom/*.csv
+
+# Python
+__pycache__/
+*.py[cod]
 
 #also ignore step files which may not be licensed under open source
 *.step

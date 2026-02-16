@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SiPM Bias Control – BOM Shopping List</title>
+  <style>
+    body { font-family: sans-serif; max-width: 1200px; margin: 1rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.3rem; }
+    p { color: #444; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 0.4rem 0.6rem; text-align: left; font-size: 0.9rem; }
+    th { background: #eee; }
+    tr:nth-child(even) { background: #f9f9f9; }
+    .links a { margin-right: 0.5rem; }
+    .qty { text-align: right; }
+    .price { min-width: 4rem; }
+    input.price { width: 4rem; }
+  </style>
+</head>
+<body>
+  <h1>BOM Shopping List – What to Buy &amp; Cost</h1>
+  <p><strong>How to use:</strong> Click the Digi-Key / Mouser / LCSC links to search for each part and get the price. 
+  Enter the unit price in the last column; total cost will update. 
+  Then buy from your chosen distributor (or copy part numbers into JLCPCB/LCSC for assembly).</p>
+  <p>Quantities below are for <strong>one full set</strong> (one of each board). Multiply by how many sets you want.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Value / Part number</th>
+        <th>Footprint</th>
+        <th>Qty (1 set)</th>
+        <th>Used on boards</th>
+        <th>Search for price</th>
+        <th>Unit price (USD)</th>
+        <th>Total (USD)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>0</td>
+        <td>R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</td>
+        <td class="qty">1</td>
+        <td>tiav3_s13360_3030VE</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=0" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=0" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=0" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-0R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-0R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 'total-0R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 1)"></td>
+        <td class="price"><span id="total-0R_0402_1005Metric_Pad0.72x0.64mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>0.10uH</td>
+        <td>L_0603_1608Metric_Pad1.05x0.95mm_HandSolder</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=0.10uH" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=0.10uH" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=0.10uH" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-0.10uHL_0603_1608Metric_Pad1.05x0.95mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-0.10uHL_0603_1608Metric_Pad1.05x0.95mm_HandSolder', 'total-0.10uHL_0603_1608Metric_Pad1.05x0.95mm_HandSolder', 1)"></td>
+        <td class="price"><span id="total-0.10uHL_0603_1608Metric_Pad1.05x0.95mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>1.5k</td>
+        <td>R_0402_1005Metric</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14160</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=1.5k" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=1.5k" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=1.5k" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-1.5kR_0402_1005Metric" placeholder="0.00" oninput="updateTotal('unit-1.5kR_0402_1005Metric', 'total-1.5kR_0402_1005Metric', 1)"></td>
+        <td class="price"><span id="total-1.5kR_0402_1005Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>1.5k</td>
+        <td>R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</td>
+        <td class="qty">2</td>
+        <td>tiav3_s13360_3030VE, tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=1.5k" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=1.5k" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=1.5k" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-1.5kR_0402_1005Metric_Pad0.72x0.64mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-1.5kR_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 'total-1.5kR_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 2)"></td>
+        <td class="price"><span id="total-1.5kR_0402_1005Metric_Pad0.72x0.64mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>10</td>
+        <td>R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</td>
+        <td class="qty">3</td>
+        <td>tiav3_s13360_3030VE, tiav3_s14160, tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=10" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=10" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=10" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-10R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-10R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 'total-10R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 3)"></td>
+        <td class="price"><span id="total-10R_0402_1005Metric_Pad0.72x0.64mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>10n</td>
+        <td>C_0603_1608Metric</td>
+        <td class="qty">2</td>
+        <td>bias-control-lt8362, power-supply</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=10n" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=10n" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=10n" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-10nC_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-10nC_0603_1608Metric', 'total-10nC_0603_1608Metric', 2)"></td>
+        <td class="price"><span id="total-10nC_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>120p</td>
+        <td>C_0402_1005Metric</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14160</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=120p" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=120p" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=120p" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-120pC_0402_1005Metric" placeholder="0.00" oninput="updateTotal('unit-120pC_0402_1005Metric', 'total-120pC_0402_1005Metric', 1)"></td>
+        <td class="price"><span id="total-120pC_0402_1005Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>120pF</td>
+        <td>C_0402_1005Metric</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14160</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=120pF" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=120pF" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=120pF" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-120pFC_0402_1005Metric" placeholder="0.00" oninput="updateTotal('unit-120pFC_0402_1005Metric', 'total-120pFC_0402_1005Metric', 1)"></td>
+        <td class="price"><span id="total-120pFC_0402_1005Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>1500nH</td>
+        <td>L_0603_1608Metric</td>
+        <td class="qty">2</td>
+        <td>tiav3_s13360_3030VE, tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=1500nH" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=1500nH" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=1500nH" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-1500nHL_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-1500nHL_0603_1608Metric', 'total-1500nHL_0603_1608Metric', 2)"></td>
+        <td class="price"><span id="total-1500nHL_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>160nH</td>
+        <td>L_0603_1608Metric_Pad1.05x0.95mm_HandSolder</td>
+        <td class="qty">1</td>
+        <td>tiav3_s13360_3030VE</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=160nH" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=160nH" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=160nH" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-160nHL_0603_1608Metric_Pad1.05x0.95mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-160nHL_0603_1608Metric_Pad1.05x0.95mm_HandSolder', 'total-160nHL_0603_1608Metric_Pad1.05x0.95mm_HandSolder', 1)"></td>
+        <td class="price"><span id="total-160nHL_0603_1608Metric_Pad1.05x0.95mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>1M</td>
+        <td>R_0603_1608Metric</td>
+        <td class="qty">2</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=1M" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=1M" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=1M" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-1MR_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-1MR_0603_1608Metric', 'total-1MR_0603_1608Metric', 2)"></td>
+        <td class="price"><span id="total-1MR_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>1N4148WS</td>
+        <td>D_SOD-323F</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=1N4148WS" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=1N4148WS" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=1N4148WS" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-1N4148WSD_SOD-323F" placeholder="0.00" oninput="updateTotal('unit-1N4148WSD_SOD-323F', 'total-1N4148WSD_SOD-323F', 1)"></td>
+        <td class="price"><span id="total-1N4148WSD_SOD-323F">—</span></td>
+      </tr>
+
+      <tr>
+        <td>1u</td>
+        <td>C_0402_1005Metric</td>
+        <td class="qty">12</td>
+        <td>tiav3_s13360_3030VE, tiav3_s14160, tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=1u" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=1u" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=1u" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-1uC_0402_1005Metric" placeholder="0.00" oninput="updateTotal('unit-1uC_0402_1005Metric', 'total-1uC_0402_1005Metric', 12)"></td>
+        <td class="price"><span id="total-1uC_0402_1005Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>1u</td>
+        <td>C_0603_1608Metric</td>
+        <td class="qty">2</td>
+        <td>bias-control-lt8362, power-supply</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=1u" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=1u" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=1u" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-1uC_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-1uC_0603_1608Metric', 'total-1uC_0603_1608Metric', 2)"></td>
+        <td class="price"><span id="total-1uC_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>1uF</td>
+        <td>C_0603_1608Metric</td>
+        <td class="qty">1</td>
+        <td>power-supply</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=1uF" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=1uF" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=1uF" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-1uFC_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-1uFC_0603_1608Metric', 'total-1uFC_0603_1608Metric', 1)"></td>
+        <td class="price"><span id="total-1uFC_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>2.2n</td>
+        <td>C_0603_1608Metric</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=2.2n" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=2.2n" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=2.2n" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-2.2nC_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-2.2nC_0603_1608Metric', 'total-2.2nC_0603_1608Metric', 1)"></td>
+        <td class="price"><span id="total-2.2nC_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>2.2u</td>
+        <td>C_0603_1608Metric</td>
+        <td class="qty">7</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=2.2u" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=2.2u" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=2.2u" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-2.2uC_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-2.2uC_0603_1608Metric', 'total-2.2uC_0603_1608Metric', 7)"></td>
+        <td class="price"><span id="total-2.2uC_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>2.2u</td>
+        <td>C_1206_3216Metric</td>
+        <td class="qty">4</td>
+        <td>tiav3_s13360_3030VE, tiav3_s14160</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=2.2u" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=2.2u" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=2.2u" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-2.2uC_1206_3216Metric" placeholder="0.00" oninput="updateTotal('unit-2.2uC_1206_3216Metric', 'total-2.2uC_1206_3216Metric', 4)"></td>
+        <td class="price"><span id="total-2.2uC_1206_3216Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>2.2u</td>
+        <td>C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</td>
+        <td class="qty">2</td>
+        <td>tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=2.2u" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=2.2u" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=2.2u" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-2.2uC_1206_3216Metric_Pad1.33x1.80mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-2.2uC_1206_3216Metric_Pad1.33x1.80mm_HandSolder', 'total-2.2uC_1206_3216Metric_Pad1.33x1.80mm_HandSolder', 2)"></td>
+        <td class="price"><span id="total-2.2uC_1206_3216Metric_Pad1.33x1.80mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>2.2uF</td>
+        <td>C_1206_3216Metric</td>
+        <td class="qty">5</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=2.2uF" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=2.2uF" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=2.2uF" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-2.2uFC_1206_3216Metric" placeholder="0.00" oninput="updateTotal('unit-2.2uFC_1206_3216Metric', 'total-2.2uFC_1206_3216Metric', 5)"></td>
+        <td class="price"><span id="total-2.2uFC_1206_3216Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>22u</td>
+        <td>C_0603_1608Metric</td>
+        <td class="qty">9</td>
+        <td>bias-control-lt8362, power-supply, tiav3_s14160, tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=22u" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=22u" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=22u" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-22uC_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-22uC_0603_1608Metric', 'total-22uC_0603_1608Metric', 9)"></td>
+        <td class="price"><span id="total-22uC_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>24.9k</td>
+        <td>R_0603_1608Metric</td>
+        <td class="qty">1</td>
+        <td>power-supply</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=24.9k" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=24.9k" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=24.9k" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-24.9kR_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-24.9kR_0603_1608Metric', 'total-24.9kR_0603_1608Metric', 1)"></td>
+        <td class="price"><span id="total-24.9kR_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>25pF</td>
+        <td>C_0603_1608Metric</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=25pF" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=25pF" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=25pF" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-25pFC_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-25pFC_0603_1608Metric', 'total-25pFC_0603_1608Metric', 1)"></td>
+        <td class="price"><span id="total-25pFC_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>3.0</td>
+        <td>R_0402_1005Metric</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14160</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=3.0" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=3.0" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=3.0" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-3.0R_0402_1005Metric" placeholder="0.00" oninput="updateTotal('unit-3.0R_0402_1005Metric', 'total-3.0R_0402_1005Metric', 1)"></td>
+        <td class="price"><span id="total-3.0R_0402_1005Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>3.0</td>
+        <td>R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</td>
+        <td class="qty">1</td>
+        <td>tiav3_s13360_3030VE</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=3.0" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=3.0" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=3.0" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-3.0R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-3.0R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 'total-3.0R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 1)"></td>
+        <td class="price"><span id="total-3.0R_0402_1005Metric_Pad0.72x0.64mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>3.3</td>
+        <td>R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=3.3" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=3.3" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=3.3" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-3.3R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-3.3R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 'total-3.3R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 1)"></td>
+        <td class="price"><span id="total-3.3R_0402_1005Metric_Pad0.72x0.64mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>3.3uH</td>
+        <td>SRP05204R7K</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=3.3uH" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=3.3uH" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=3.3uH" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-3.3uHSRP05204R7K" placeholder="0.00" oninput="updateTotal('unit-3.3uHSRP05204R7K', 'total-3.3uHSRP05204R7K', 1)"></td>
+        <td class="price"><span id="total-3.3uHSRP05204R7K">—</span></td>
+      </tr>
+
+      <tr>
+        <td>30</td>
+        <td>R_0402_1005Metric</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14160</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=30" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=30" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=30" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-30R_0402_1005Metric" placeholder="0.00" oninput="updateTotal('unit-30R_0402_1005Metric', 'total-30R_0402_1005Metric', 1)"></td>
+        <td class="price"><span id="total-30R_0402_1005Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>33</td>
+        <td>R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=33" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=33" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=33" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-33R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-33R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 'total-33R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 1)"></td>
+        <td class="price"><span id="total-33R_0402_1005Metric_Pad0.72x0.64mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>330p</td>
+        <td>C_0402_1005Metric</td>
+        <td class="qty">1</td>
+        <td>tiav3_s13360_3030VE</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=330p" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=330p" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=330p" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-330pC_0402_1005Metric" placeholder="0.00" oninput="updateTotal('unit-330pC_0402_1005Metric', 'total-330pC_0402_1005Metric', 1)"></td>
+        <td class="price"><span id="total-330pC_0402_1005Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>330pF</td>
+        <td>C_0402_1005Metric</td>
+        <td class="qty">1</td>
+        <td>tiav3_s13360_3030VE</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=330pF" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=330pF" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=330pF" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-330pFC_0402_1005Metric" placeholder="0.00" oninput="updateTotal('unit-330pFC_0402_1005Metric', 'total-330pFC_0402_1005Metric', 1)"></td>
+        <td class="price"><span id="total-330pFC_0402_1005Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>330pF</td>
+        <td>C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</td>
+        <td class="qty">2</td>
+        <td>tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=330pF" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=330pF" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=330pF" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-330pFC_0402_1005Metric_Pad0.74x0.62mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-330pFC_0402_1005Metric_Pad0.74x0.62mm_HandSolder', 'total-330pFC_0402_1005Metric_Pad0.74x0.62mm_HandSolder', 2)"></td>
+        <td class="price"><span id="total-330pFC_0402_1005Metric_Pad0.74x0.62mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>33nH</td>
+        <td>L_0603_1608Metric_Pad1.05x0.95mm_HandSolder</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14160</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=33nH" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=33nH" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=33nH" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-33nHL_0603_1608Metric_Pad1.05x0.95mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-33nHL_0603_1608Metric_Pad1.05x0.95mm_HandSolder', 'total-33nHL_0603_1608Metric_Pad1.05x0.95mm_HandSolder', 1)"></td>
+        <td class="price"><span id="total-33nHL_0603_1608Metric_Pad1.05x0.95mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>36.5k</td>
+        <td>R_0603_1608Metric</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=36.5k" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=36.5k" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=36.5k" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-36.5kR_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-36.5kR_0603_1608Metric', 'total-36.5kR_0603_1608Metric', 1)"></td>
+        <td class="price"><span id="total-36.5kR_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>39k</td>
+        <td>R_0603_1608Metric</td>
+        <td class="qty">3</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=39k" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=39k" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=39k" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-39kR_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-39kR_0603_1608Metric', 'total-39kR_0603_1608Metric', 3)"></td>
+        <td class="price"><span id="total-39kR_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>39k (LT8361) / 52.3k (LT8362)</td>
+        <td>R_0603_1608Metric</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=39k+%28LT8361%29+%2F+52.3k+%28LT8362%29" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=39k+%28LT8361%29+%2F+52.3k+%28LT8362%29" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=39k+%28LT8361%29+%2F+52.3k+%28LT8362%29" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-39k%20%28LT8361%29%20%2F%2052.3k%20%28LT8362%29R_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-39k%20%28LT8361%29%20%2F%2052.3k%20%28LT8362%29R_0603_1608Metric', 'total-39k%20%28LT8361%29%20%2F%2052.3k%20%28LT8362%29R_0603_1608Metric', 1)"></td>
+        <td class="price"><span id="total-39k%20%28LT8361%29%20%2F%2052.3k%20%28LT8362%29R_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>4.7</td>
+        <td>R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</td>
+        <td class="qty">1</td>
+        <td>tiav3_s13360_3030VE</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=4.7" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=4.7" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=4.7" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-4.7R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-4.7R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 'total-4.7R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 1)"></td>
+        <td class="price"><span id="total-4.7R_0402_1005Metric_Pad0.72x0.64mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>43</td>
+        <td>R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</td>
+        <td class="qty">1</td>
+        <td>tiav3_s13360_3030VE</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=43" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=43" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=43" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-43R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-43R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 'total-43R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 1)"></td>
+        <td class="price"><span id="total-43R_0402_1005Metric_Pad0.72x0.64mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>5</td>
+        <td>R_0603_1608Metric</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=5" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=5" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=5" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-5R_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-5R_0603_1608Metric', 'total-5R_0603_1608Metric', 1)"></td>
+        <td class="price"><span id="total-5R_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>5.1k</td>
+        <td>R_0603_1608Metric</td>
+        <td class="qty">6</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=5.1k" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=5.1k" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=5.1k" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-5.1kR_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-5.1kR_0603_1608Metric', 'total-5.1kR_0603_1608Metric', 6)"></td>
+        <td class="price"><span id="total-5.1kR_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>50</td>
+        <td>R_0402_1005Metric</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14160</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=50" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=50" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=50" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-50R_0402_1005Metric" placeholder="0.00" oninput="updateTotal('unit-50R_0402_1005Metric', 'total-50R_0402_1005Metric', 1)"></td>
+        <td class="price"><span id="total-50R_0402_1005Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>50</td>
+        <td>R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</td>
+        <td class="qty">2</td>
+        <td>tiav3_s13360_3030VE, tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=50" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=50" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=50" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-50R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-50R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 'total-50R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 2)"></td>
+        <td class="price"><span id="total-50R_0402_1005Metric_Pad0.72x0.64mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>560nH</td>
+        <td>L_0603_1608Metric</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14160</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=560nH" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=560nH" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=560nH" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-560nHL_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-560nHL_0603_1608Metric', 'total-560nHL_0603_1608Metric', 1)"></td>
+        <td class="price"><span id="total-560nHL_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>5k</td>
+        <td>R_0402_1005Metric</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14160</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=5k" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=5k" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=5k" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-5kR_0402_1005Metric" placeholder="0.00" oninput="updateTotal('unit-5kR_0402_1005Metric', 'total-5kR_0402_1005Metric', 1)"></td>
+        <td class="price"><span id="total-5kR_0402_1005Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>5k</td>
+        <td>R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</td>
+        <td class="qty">2</td>
+        <td>tiav3_s13360_3030VE, tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=5k" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=5k" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=5k" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-5kR_0402_1005Metric_Pad0.72x0.64mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-5kR_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 'total-5kR_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 2)"></td>
+        <td class="price"><span id="total-5kR_0402_1005Metric_Pad0.72x0.64mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>64.9k</td>
+        <td>R_0603_1608Metric</td>
+        <td class="qty">1</td>
+        <td>power-supply</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=64.9k" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=64.9k" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=64.9k" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-64.9kR_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-64.9kR_0603_1608Metric', 'total-64.9kR_0603_1608Metric', 1)"></td>
+        <td class="price"><span id="total-64.9kR_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>68</td>
+        <td>R_0402_1005Metric</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14160</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=68" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=68" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=68" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-68R_0402_1005Metric" placeholder="0.00" oninput="updateTotal('unit-68R_0402_1005Metric', 'total-68R_0402_1005Metric', 1)"></td>
+        <td class="price"><span id="total-68R_0402_1005Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>68</td>
+        <td>R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</td>
+        <td class="qty">2</td>
+        <td>tiav3_s13360_3030VE, tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=68" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=68" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=68" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-68R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" placeholder="0.00" oninput="updateTotal('unit-68R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 'total-68R_0402_1005Metric_Pad0.72x0.64mm_HandSolder', 2)"></td>
+        <td class="price"><span id="total-68R_0402_1005Metric_Pad0.72x0.64mm_HandSolder">—</span></td>
+      </tr>
+
+      <tr>
+        <td>69.8k</td>
+        <td>R_0603_1608Metric</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=69.8k" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=69.8k" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=69.8k" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-69.8kR_0603_1608Metric" placeholder="0.00" oninput="updateTotal('unit-69.8kR_0603_1608Metric', 'total-69.8kR_0603_1608Metric', 1)"></td>
+        <td class="price"><span id="total-69.8kR_0603_1608Metric">—</span></td>
+      </tr>
+
+      <tr>
+        <td>ATSAMD21E18A-AF</td>
+        <td>ATSAMD21E18A-AF</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=ATSAMD21E18A-AF" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=ATSAMD21E18A-AF" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=ATSAMD21E18A-AF" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-ATSAMD21E18A-AFATSAMD21E18A-AF" placeholder="0.00" oninput="updateTotal('unit-ATSAMD21E18A-AFATSAMD21E18A-AF', 'total-ATSAMD21E18A-AFATSAMD21E18A-AF', 1)"></td>
+        <td class="price"><span id="total-ATSAMD21E18A-AFATSAMD21E18A-AF">—</span></td>
+      </tr>
+
+      <tr>
+        <td>Conn_01x04</td>
+        <td>PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Right</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=Conn_01x04" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=Conn_01x04" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=Conn_01x04" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-Conn_01x04PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Right" placeholder="0.00" oninput="updateTotal('unit-Conn_01x04PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Right', 'total-Conn_01x04PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Right', 1)"></td>
+        <td class="price"><span id="total-Conn_01x04PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Right">—</span></td>
+      </tr>
+
+      <tr>
+        <td>Conn_01x06</td>
+        <td>PinHeader_2x03_P2.54mm_Vertical</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=Conn_01x06" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=Conn_01x06" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=Conn_01x06" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-Conn_01x06PinHeader_2x03_P2.54mm_Vertical" placeholder="0.00" oninput="updateTotal('unit-Conn_01x06PinHeader_2x03_P2.54mm_Vertical', 'total-Conn_01x06PinHeader_2x03_P2.54mm_Vertical', 1)"></td>
+        <td class="price"><span id="total-Conn_01x06PinHeader_2x03_P2.54mm_Vertical">—</span></td>
+      </tr>
+
+      <tr>
+        <td>Conn_Coaxial</td>
+        <td>SMB_Jack_Vertical</td>
+        <td class="qty">3</td>
+        <td>tiav3_s13360_3030VE, tiav3_s14160, tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=Conn_Coaxial" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=Conn_Coaxial" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=Conn_Coaxial" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-Conn_CoaxialSMB_Jack_Vertical" placeholder="0.00" oninput="updateTotal('unit-Conn_CoaxialSMB_Jack_Vertical', 'total-Conn_CoaxialSMB_Jack_Vertical', 3)"></td>
+        <td class="price"><span id="total-Conn_CoaxialSMB_Jack_Vertical">—</span></td>
+      </tr>
+
+      <tr>
+        <td>ISP</td>
+        <td>POGO_ISP</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=ISP" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=ISP" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=ISP" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-ISPPOGO_ISP" placeholder="0.00" oninput="updateTotal('unit-ISPPOGO_ISP', 'total-ISPPOGO_ISP', 1)"></td>
+        <td class="price"><span id="total-ISPPOGO_ISP">—</span></td>
+      </tr>
+
+      <tr>
+        <td>LM2776</td>
+        <td>LM2776DBVR</td>
+        <td class="qty">1</td>
+        <td>power-supply</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=LM2776" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=LM2776" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=LM2776" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-LM2776LM2776DBVR" placeholder="0.00" oninput="updateTotal('unit-LM2776LM2776DBVR', 'total-LM2776LM2776DBVR', 1)"></td>
+        <td class="price"><span id="total-LM2776LM2776DBVR">—</span></td>
+      </tr>
+
+      <tr>
+        <td>LT8361EMSE/LT8362EMSE</td>
+        <td>LT8364IMSE-PBF</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=LT8361EMSE%2FLT8362EMSE" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=LT8361EMSE%2FLT8362EMSE" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=LT8361EMSE%2FLT8362EMSE" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-LT8361EMSE%2FLT8362EMSELT8364IMSE-PBF" placeholder="0.00" oninput="updateTotal('unit-LT8361EMSE%2FLT8362EMSELT8364IMSE-PBF', 'total-LT8361EMSE%2FLT8362EMSELT8364IMSE-PBF', 1)"></td>
+        <td class="price"><span id="total-LT8361EMSE%2FLT8362EMSELT8364IMSE-PBF">—</span></td>
+      </tr>
+
+      <tr>
+        <td>MCP47FEB22A2-E_ST</td>
+        <td>SOP65P640X120-8N</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=MCP47FEB22A2-E_ST" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=MCP47FEB22A2-E_ST" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=MCP47FEB22A2-E_ST" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-MCP47FEB22A2-E_STSOP65P640X120-8N" placeholder="0.00" oninput="updateTotal('unit-MCP47FEB22A2-E_STSOP65P640X120-8N', 'total-MCP47FEB22A2-E_STSOP65P640X120-8N', 1)"></td>
+        <td class="price"><span id="total-MCP47FEB22A2-E_STSOP65P640X120-8N">—</span></td>
+      </tr>
+
+      <tr>
+        <td>MCP6C02T-020E/CHY</td>
+        <td>SOT-23-6</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=MCP6C02T-020E%2FCHY" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=MCP6C02T-020E%2FCHY" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=MCP6C02T-020E%2FCHY" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-MCP6C02T-020E%2FCHYSOT-23-6" placeholder="0.00" oninput="updateTotal('unit-MCP6C02T-020E%2FCHYSOT-23-6', 'total-MCP6C02T-020E%2FCHYSOT-23-6', 1)"></td>
+        <td class="price"><span id="total-MCP6C02T-020E%2FCHYSOT-23-6">—</span></td>
+      </tr>
+
+      <tr>
+        <td>MIC5317-3.3YM5-TR</td>
+        <td>MIC5317-3.3YM5-TR</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=MIC5317-3.3YM5-TR" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=MIC5317-3.3YM5-TR" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=MIC5317-3.3YM5-TR" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-MIC5317-3.3YM5-TRMIC5317-3.3YM5-TR" placeholder="0.00" oninput="updateTotal('unit-MIC5317-3.3YM5-TRMIC5317-3.3YM5-TR', 'total-MIC5317-3.3YM5-TRMIC5317-3.3YM5-TR', 1)"></td>
+        <td class="price"><span id="total-MIC5317-3.3YM5-TRMIC5317-3.3YM5-TR">—</span></td>
+      </tr>
+
+      <tr>
+        <td>OPA847IDBVT</td>
+        <td>OPA847IDBVT</td>
+        <td class="qty">3</td>
+        <td>tiav3_s13360_3030VE, tiav3_s14160, tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=OPA847IDBVT" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=OPA847IDBVT" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=OPA847IDBVT" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-OPA847IDBVTOPA847IDBVT" placeholder="0.00" oninput="updateTotal('unit-OPA847IDBVTOPA847IDBVT', 'total-OPA847IDBVTOPA847IDBVT', 3)"></td>
+        <td class="price"><span id="total-OPA847IDBVTOPA847IDBVT">—</span></td>
+      </tr>
+
+      <tr>
+        <td>PMEG6030EP</td>
+        <td>D_SOD-128</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=PMEG6030EP" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=PMEG6030EP" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=PMEG6030EP" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-PMEG6030EPD_SOD-128" placeholder="0.00" oninput="updateTotal('unit-PMEG6030EPD_SOD-128', 'total-PMEG6030EPD_SOD-128', 1)"></td>
+        <td class="price"><span id="total-PMEG6030EPD_SOD-128">—</span></td>
+      </tr>
+
+      <tr>
+        <td>RT9072B</td>
+        <td>SOT-23-5</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=RT9072B" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=RT9072B" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=RT9072B" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-RT9072BSOT-23-5" placeholder="0.00" oninput="updateTotal('unit-RT9072BSOT-23-5', 'total-RT9072BSOT-23-5', 1)"></td>
+        <td class="price"><span id="total-RT9072BSOT-23-5">—</span></td>
+      </tr>
+
+      <tr>
+        <td>s13360_3050VE</td>
+        <td>S13360-3050VE</td>
+        <td class="qty">1</td>
+        <td>tiav3_s13360_3030VE</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=s13360_3050VE" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=s13360_3050VE" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=s13360_3050VE" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-s13360_3050VES13360-3050VE" placeholder="0.00" oninput="updateTotal('unit-s13360_3050VES13360-3050VE', 'total-s13360_3050VES13360-3050VE', 1)"></td>
+        <td class="price"><span id="total-s13360_3050VES13360-3050VE">—</span></td>
+      </tr>
+
+      <tr>
+        <td>S14160-30</td>
+        <td>S14160-30</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14160</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=S14160-30" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=S14160-30" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=S14160-30" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-S14160-30S14160-30" placeholder="0.00" oninput="updateTotal('unit-S14160-30S14160-30', 'total-S14160-30S14160-30', 1)"></td>
+        <td class="price"><span id="total-S14160-30S14160-30">—</span></td>
+      </tr>
+
+      <tr>
+        <td>SIPM</td>
+        <td>S14420</td>
+        <td class="qty">1</td>
+        <td>tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=SIPM" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=SIPM" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=SIPM" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-SIPMS14420" placeholder="0.00" oninput="updateTotal('unit-SIPMS14420', 'total-SIPMS14420', 1)"></td>
+        <td class="price"><span id="total-SIPMS14420">—</span></td>
+      </tr>
+
+      <tr>
+        <td>SSQ-103-01-G-D</td>
+        <td>PinHeader_2x03_P2.54mm_Vertical</td>
+        <td class="qty">3</td>
+        <td>tiav3_s13360_3030VE, tiav3_s14160, tiav3_s14420</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=SSQ-103-01-G-D" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=SSQ-103-01-G-D" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=SSQ-103-01-G-D" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-SSQ-103-01-G-DPinHeader_2x03_P2.54mm_Vertical" placeholder="0.00" oninput="updateTotal('unit-SSQ-103-01-G-DPinHeader_2x03_P2.54mm_Vertical', 'total-SSQ-103-01-G-DPinHeader_2x03_P2.54mm_Vertical', 3)"></td>
+        <td class="price"><span id="total-SSQ-103-01-G-DPinHeader_2x03_P2.54mm_Vertical">—</span></td>
+      </tr>
+
+      <tr>
+        <td>SSQ-103-03-G-D</td>
+        <td>PinHeader_2x03_P2.54mm_Vertical</td>
+        <td class="qty">1</td>
+        <td>power-supply</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=SSQ-103-03-G-D" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=SSQ-103-03-G-D" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=SSQ-103-03-G-D" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-SSQ-103-03-G-DPinHeader_2x03_P2.54mm_Vertical" placeholder="0.00" oninput="updateTotal('unit-SSQ-103-03-G-DPinHeader_2x03_P2.54mm_Vertical', 'total-SSQ-103-03-G-DPinHeader_2x03_P2.54mm_Vertical', 1)"></td>
+        <td class="price"><span id="total-SSQ-103-03-G-DPinHeader_2x03_P2.54mm_Vertical">—</span></td>
+      </tr>
+
+      <tr>
+        <td>TestPoint</td>
+        <td>TestPoint_Pad_D1.0mm</td>
+        <td class="qty">15</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=TestPoint" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=TestPoint" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=TestPoint" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-TestPointTestPoint_Pad_D1.0mm" placeholder="0.00" oninput="updateTotal('unit-TestPointTestPoint_Pad_D1.0mm', 'total-TestPointTestPoint_Pad_D1.0mm', 15)"></td>
+        <td class="price"><span id="total-TestPointTestPoint_Pad_D1.0mm">—</span></td>
+      </tr>
+
+      <tr>
+        <td>TPS72301DBVR</td>
+        <td>TPS72301DBVR</td>
+        <td class="qty">1</td>
+        <td>power-supply</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=TPS72301DBVR" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=TPS72301DBVR" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=TPS72301DBVR" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-TPS72301DBVRTPS72301DBVR" placeholder="0.00" oninput="updateTotal('unit-TPS72301DBVRTPS72301DBVR', 'total-TPS72301DBVRTPS72301DBVR', 1)"></td>
+        <td class="price"><span id="total-TPS72301DBVRTPS72301DBVR">—</span></td>
+      </tr>
+
+      <tr>
+        <td>TPS79333DBVR</td>
+        <td>TPS79333DBVR</td>
+        <td class="qty">1</td>
+        <td>power-supply</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=TPS79333DBVR" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=TPS79333DBVR" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=TPS79333DBVR" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-TPS79333DBVRTPS79333DBVR" placeholder="0.00" oninput="updateTotal('unit-TPS79333DBVRTPS79333DBVR', 'total-TPS79333DBVRTPS79333DBVR', 1)"></td>
+        <td class="price"><span id="total-TPS79333DBVRTPS79333DBVR">—</span></td>
+      </tr>
+
+      <tr>
+        <td>USB_C_Receptacle_USB2.0_16P</td>
+        <td>CUI_UJ20-C-V-C-2-SMT-TR_fixedV2</td>
+        <td class="qty">1</td>
+        <td>bias-control-lt8362</td>
+        <td class="links">
+          <a href="https://www.digikey.com/en/products?keywords=USB_C_Receptacle_USB2.0_16P" target="_blank" rel="noopener">Digi-Key</a>
+          <a href="https://www.mouser.com/c/?q=USB_C_Receptacle_USB2.0_16P" target="_blank" rel="noopener">Mouser</a>
+          <a href="https://www.lcsc.com/search?q=USB_C_Receptacle_USB2.0_16P" target="_blank" rel="noopener">LCSC</a>
+        </td>
+        <td class="price"><input type="number" step="0.01" min="0" class="price" id="unit-USB_C_Receptacle_USB2.0_16PCUI_UJ20-C-V-C-2-SMT-TR_fixedV2" placeholder="0.00" oninput="updateTotal('unit-USB_C_Receptacle_USB2.0_16PCUI_UJ20-C-V-C-2-SMT-TR_fixedV2', 'total-USB_C_Receptacle_USB2.0_16PCUI_UJ20-C-V-C-2-SMT-TR_fixedV2', 1)"></td>
+        <td class="price"><span id="total-USB_C_Receptacle_USB2.0_16PCUI_UJ20-C-V-C-2-SMT-TR_fixedV2">—</span></td>
+      </tr>
+
+    </tbody>
+  </table>
+  <p style="margin-top: 1.5rem;"><strong>Grand total:</strong> <span id="grand-total">0.00</span> USD</p>
+  <script>
+    function updateTotal(unitId, totalId, qty) {
+      var unit = document.getElementById(unitId);
+      var totalEl = document.getElementById(totalId);
+      var u = parseFloat(unit.value) || 0;
+      totalEl.textContent = (u * qty).toFixed(2);
+      updateGrandTotal();
+    }
+    function updateGrandTotal() {
+      var sum = 0;
+      document.querySelectorAll('tbody tr').forEach(function(tr) {
+        var totalSpan = tr.querySelector('td:last-child span');
+        if (totalSpan && totalSpan.textContent !== '—') sum += parseFloat(totalSpan.textContent) || 0;
+      });
+      document.getElementById('grand-total').textContent = sum.toFixed(2);
+    }
+  </script>
+</body>
+</html>
